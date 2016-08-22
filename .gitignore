@@ -24,5 +24,6 @@
 *.mtc1
 *.out
 *.pdf
+*.pyg
 *.synctex.gz
 *.toc
