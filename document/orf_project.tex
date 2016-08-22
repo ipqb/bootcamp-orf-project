@@ -1,0 +1,104 @@
+\documentclass{article}
+
+\usepackage[version=3]{mhchem}
+\usepackage[greek,english]{babel}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fixltx2e}
+\usepackage{titlesec}
+\usepackage[normalem]{ulem}
+\usepackage{parskip}
+\usepackage{multirow}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage{float}
+\usepackage[super]{nth}
+\usepackage{minted}
+
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+
+\hypersetup{
+  colorlinks   = true,
+  urlcolor     = blue,
+  linkcolor    = black,
+  citecolor    = black
+}
+
+\definecolor{grey}{gray}{0.65}
+
+\newfloat{listing}{thp}{lop}
+\floatname{listing}{Listing}
+
+\usemintedstyle{borland}
+
+\setcounter{secnumdepth}{0}
+
+\newcommand{\calpha}{C\textsubscript{\textgreek{a}}}
+\newcommand{\ahelices}{\textgreek{a}-helices}
+\newcommand{\bsheets}{\textgreek{b}-sheets}
+\newcommand{\bbphi}{\ensuremath{\phi}}
+\newcommand{\bbpsi}{\ensuremath{\psi}}
+\newcommand{\bbomega}{\ensuremath{\omega}}
+\newcommand{\module}[2]{\href{#2}{\texttt{#1}}}
+\newcommand{\atomrec}{\texttt{ATOM} record}
+
+\begin{document}
+
+\title{Making Ramachandran Plots}
+\author{Summer Programming Project}
+\date{}
+\maketitle{}
+
+\section{Introduction}
+
+The purpose of this project is to give you some practice using Python in a 
+scientific context.  We designed the project for beginning programmers, but 
+before starting you'll still have to teach yourself the basics of Python.  We 
+recommend the book \emph{Learn Python the Hard Way} (LPTHW), which you can 
+either \href{http://learnpythonthehardway.org/book/}{read for free online} or 
+\href{https://paydiv.io/access/buy/2/}{purchase}.
+
+The project is to write a program that generates Ramachandran plots from 
+\href{http://www.rcsb.org/pdb/home/home.do}{Protein Data Bank} (PDB) files.  
+Ramachandran plots show how backbone torsion angles are distributed in 
+proteins.  Different features of proteins (namely \ahelices{} and \bsheets{}) 
+occupy distinct regions in these plots.  For this reason, Ramachandran plots 
+are commonly used both to validate experimental structures and to predict 
+computational structures.
+
+The project is divided into four parts:
+
+\begin{enumerate}
+ \item Setting up Python and reading the command line.
+ \item Parsing groups of four backbone atoms from PDB files.
+ \item Calculating torsions angles from those groups of atoms.
+ \item Plotting those torsion angles using matplotlib.
+\end{enumerate}
+
+Try to get through at least one part every two weeks.  It takes time to get 
+comfortable writing code, and you won't get there if you put off the whole 
+project until just before bootcamp starts.  The project will be due on the 
+first day of bootcamp.  We will wrap up the project with an activity where 
+everyone explains their code to a partner (i.e. a code review).  This activity 
+won't be as valuable for you if you don't finish the project on time.  If you 
+are worried about finishing the project on time, or have any questions about 
+the project or programming in general, please don't hesitate to email any one 
+of us.
+
+\subsection{What if you already know how to program?}
+
+Even if you already know how to program, it's still important for you to work 
+through this project so that you can participate in the code review we'll be 
+holding on the first day of bootcamp (see above).  In fact, you should make an 
+extra effort make your code as clean and understandable as possible so that it 
+can be an example for the more novice programmers in your class.
+
+If you know how to program, but not in Python, take this opportunity to learn 
+Python.  The challenges in the \emph{Future Directions} section will be 
+especially useful to you, because they will make you think a little bit more 
+and really explore the language.
+
+\end{document}
